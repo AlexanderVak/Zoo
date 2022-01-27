@@ -8,6 +8,11 @@ class AnimalsController < ApplicationController
 
   def homepage;end
 
+  def mammals
+    @animals = Animal.all
+    @mammals = @animals.where(classification: 'Ссавці')
+  end
+
   # GET /animals/1 or /animals/1.json
   def show
   end
@@ -67,6 +72,6 @@ class AnimalsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def animal_params
-      params.require(:animal).permit(:classification, :species, :type, :order, :family, :genus, :description, :image)
+      params.require(:animal).permit(:classification, :species, :type_, :order, :family, :genus, :description, :image)
     end
 end
