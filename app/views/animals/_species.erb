@@ -1,0 +1,61 @@
+<!-- Card deck -->
+<div class="card-deck d-flex mt-5">
+    <!-- Card -->
+    <div class="card mb-4 species-card">
+        <!--Card image-->
+        <div class="view overlay">
+            <%= image_tag("species/mammals", class: "card-img-top species-picture")%>
+            <a href="#!">
+                <div class="mask rgba-white-slight"></div>
+            </a>
+        </div>
+
+        <!--Card content-->
+        <div class="card-body d-flex flex-column">
+            <h4 class="card-title">Ссавці</h4>
+            <%=link_to "Проглянути", "#", class: 'btn btn-primary btn-md'%>
+        </div>
+
+    </div>
+    <!-- Card -->
+
+    <!-- Card -->
+    <div class="card mb-4 species-card">
+        <!--Card image-->
+        <div class="view overlay">
+            <%= image_tag("species/reptiles", class: "card-img-top species-picture")%>
+
+            <a href="#!">
+                <div class="mask rgba-white-slight"></div>
+            </a>
+        </div>
+
+        <div class="card-body d-flex flex-column">
+            <h4 class="card-title">Рептилії</h4>
+            <%=link_to "Проглянути", "#", class: 'btn btn-primary btn-md'%>
+        </div>
+        
+    </div>
+    <!-- Card -->
+
+    <!-- Card -->
+    <div class="card mb-4 species-card">
+        <!--Card image-->
+        <div class="view overlay">
+            <%= image_tag("species/birds", class: "card-img-top species-picture")%>
+            <a href="#!">
+            <div class="mask rgba-white-slight"></div>
+            </a>
+        </div>
+
+
+        <div class="card-body d-flex flex-column">
+            <h4 class="card-title">Птахи</h4>
+            <%=link_to "Проглянути", "#", class: 'btn btn-primary btn-md'%>
+        </div>
+
+    </div>
+  <!-- Card -->
+
+</div>
+<!-- Card deck -->
