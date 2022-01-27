@@ -6,6 +6,8 @@ class AnimalsController < ApplicationController
     @animals = Animal.all
   end
 
+  def homepage;end
+
   # GET /animals/1 or /animals/1.json
   def show
   end

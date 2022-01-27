@@ -1,0 +1,92 @@
+<main>
+  <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img src="https://scontent.fkbp1-1.fna.fbcdn.net/v/t39.30808-6/253337045_741605236795026_8341067661529761919_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=730e14&_nc_ohc=bTGM5VrStOUAX9O7z-q&_nc_ht=scontent.fkbp1-1.fna&oh=00_AT8OetFAavbgC1z0rvCW2acX21Z1gnOcFJBTP--RhpCFJw&oe=61F68E03" class="d-block w-100" >
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="https://scontent.fkbp1-1.fna.fbcdn.net/v/t1.6435-9/69756984_666213547203913_426981463607476224_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=e3f864&_nc_ohc=2zwmy5Nt7XUAX94pwOb&_nc_ht=scontent.fkbp1-1.fna&oh=00_AT-o0-QDHAnq1nbjYEiQwUva9MM2QaVvG_tOhwE8AmxvuA&oe=62187EF1" class="d-block w-100">
+      </div>
+      <div class="carousel-item">
+        <%= image_tag("homepage/bear_and_wolf", class: "d-block w-100")%>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <div class="container marketing">
+    <hr class="featurette-divider">
+    <div class="row featurette align-items-center">
+      <div class="col-md-7 main-page-info">
+        <h2 class="featurette-heading">Про нас</h2>
+        <p class="lead">
+          Регіональний зоопарк в Черкасах розмістився на 4,37 га,
+          так що тваринам в неволі досить просторо. 
+          Тут багато зелені, зустрічаються і рідкісні рослини, є озеро - справжній рай 
+          для водоплавних птахів. Зоопарк є прекрасним місцем для сімейних прогулянок.
+        </p>
+      </div>
+      <div class="col-md-5 order-md-1 main-page-picture">
+        <%= render 'layouts/small_carousel', locales: {
+          images: %w(
+            homepage/about_us_1.jpg
+            homepage/about_us_2.jpg
+            homepage/about_us_3.jpg
+          )
+        }%>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+    <div class="row featurette align-items-center">
+      <div class="col-md-7 order-md-2 main-page-info">
+        <h2 class="featurette-heading"> Наші улюбленці</h2>
+        <p class="lead">
+          Сьогодні тут міститься 240 видів представників фауни, понад півтори тисячі особин. 
+          Це і ссавці, і птахи, і рептилії. Зоопарк спеціалізується на представниках 
+          тераріумів групи і тварин лісової та лісостепової зон. 
+          Навіть, півтораметровий нільський крокодил отримав простору «квартиру»
+          з басейном.
+        </p>
+      </div>
+      <div class="col-md-5 order-md-1 main-page-picture">
+        <%= render 'layouts/small_carousel', locales: {
+          images: %w(
+            homepage/our_animals_1.jpg
+            homepage/our_animals_2.jpg
+            homepage/our_animals_3.jpg
+          )
+        }%>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+    <div class="row featurette align-items-center">
+      <div class="col-md-7 main-page-info">
+        <h2 class="featurette-heading">Для дітей</h2>
+        <p class="lead">
+          У зоопарку є дитячий майданчик, який наразі реконструюють, і дитяче подвір’я, 
+          де малеча може ближче познайомитися з домашніми тваринами.
+        </p>
+      </div>
+      <div class="col-md-5 order-md-1 main-page-picture">
+        <%= render 'layouts/small_carousel', locales: {
+          images: %w(
+            homepage/for_children_1.jpg
+            homepage/for_children_2.jpg
+            homepage/for_children_3.jpg
+          )
+        }%>
+      </div>
+    </div>
+    <hr class="featurette-divider">
+    <%= image_tag("zoo_map", class: "img-fluid w-100")%>
+  </div>
+</main>
