@@ -1,44 +1,50 @@
-<p id="notice"><%= notice %></p>
+<div class="card mb-3">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <%= image_tag(@animal.image, class: "card-img")%>
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h1 class="card-title"><%= @animal.species %></h1>
+        <ul class="list-group list-group-flush">
 
-<p>
-  <strong>Classification:</strong>
-  <%= @animal.classification %>
-</p>
+          <li class="list-group-item d-flex justify-content-between">
+            <strong>Тип:</strong>
+            <%= @animal.type_ %>
+          </li>
 
-<p>
-  <strong>Species:</strong>
-  <%= @animal.species %>
-</p>
+          <li class="list-group-item d-flex justify-content-between">
+              <strong>Клас:</strong>
+              <%= @animal.classification %>
+          </li>
 
-<p>
-  <strong>Type:</strong>
-  <%= @animal.type_ %>
-</p>
+          <li class="list-group-item d-flex justify-content-between">
+            <strong>Ряд:</strong>
+            <%= @animal.order %>
+          </li>
 
-<p>
-  <strong>Order:</strong>
-  <%= @animal.order %>
-</p>
+          <li class="list-group-item d-flex justify-content-between">
+            <strong>Родина:</strong>
+            <%= @animal.family %>
+          </li>
 
-<p>
-  <strong>Family:</strong>
-  <%= @animal.family %>
-</p>
+          <li class="list-group-item d-flex justify-content-between">
+            <strong>Рід:</strong>
+            <%= @animal.genus %>
+          </li>
 
-<p>
-  <strong>Genus:</strong>
-  <%= @animal.genus %>
-</p>
+          <li class="list-group-item d-flex justify-content-between">
+            <strong>Вид:</strong>
+            <%= @animal.species %>
+          </li>
 
-<p>
-  <strong>Description:</strong>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container marketing">
+  <h1 class="card-title">Основні характеристики</h1>
   <%= @animal.description %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <%= @animal.image %>
-</p>
-
-<%= link_to 'Edit', edit_animal_path(@animal) %> |
-<%= link_to 'Back', animals_path %>
+</div>
