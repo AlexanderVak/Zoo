@@ -13,6 +13,11 @@ class AnimalsController < ApplicationController
     @mammals = @animals.where(classification: 'Ссавці')
   end
 
+  def reptiles
+    @animals = Animal.all
+    @reptiles = @animals.where(classification: 'Рептилії')
+  end
+
   # GET /animals/1 or /animals/1.json
   def show
   end

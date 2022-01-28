@@ -1,0 +1,11 @@
+<div class="card bg-dark text-white">
+  <%= image_tag("animals_banner_reptiles", class: "card-img")%>
+  
+  <div class="row card-img-overlay align-content-center">
+    <h1 class=" display-1 card-title">Рептилії</h1>
+  </div>
+</div>
+
+<div class="container marketing">
+    <%= render "animal_cards", locals: { animals: @reptiles }%>
+</div>
