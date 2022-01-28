@@ -2,22 +2,17 @@
     <% locals[:animals].each do |animal| %>
         <div class="col mb-4">
             <div class="card h-100">
-            <!--Card image-->
-            <div class="view overlay">
-                <%= image_tag(animal.image.to_s, class: "card-img-top")%>
-                <div class="mask rgba-white-slight"></div>
-                </a>
+                <div class="view overlay">
+                    <%= image_tag(animal.image.to_s, class: "card-img-top")%>
+                    <div class="mask rgba-white-slight"></div>
+                    </a>
+                </div>
+
+                <div class="card-body">
+                    <h4 class="card-title"><%=animal.species%></h4>
+                    <%=link_to "Більше", animal_path(animal), class: 'btn btn-primary btn-md'%>
+                </div>
             </div>
-
-            <!--Card content-->
-            <div class="card-body">
-
-                <!--Title-->
-                <h4 class="card-title"><%=animal.species%></h4>
-                <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                <%=link_to "Більше", animal_path(animal), class: 'btn btn-primary btn-md'%>
-            </div>
-
         </div>
     <% end %>
 </div>
